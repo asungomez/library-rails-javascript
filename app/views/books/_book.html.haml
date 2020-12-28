@@ -2,4 +2,5 @@
   = link_to book.title, book
   %div
     = link_to 'Edit', edit_book_path(book)
-    = link_to 'Delete', book, method: :delete, data: { confirm: 'Are you sure?' }, class: 'text-danger'
+    %a.text-danger.delete-button{"data-book-id": book.id}
+      Delete

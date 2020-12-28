@@ -4,39 +4,14 @@
     .row.mb-4
       .col-12
         %nav.navbar.navbar-expand.navbar-light.bg-light.d-flex.justify-content-between
-          = link_to 'Register new book', new_book_path, class: 'btn btn-primary'
-          = form_tag search_books_path, method: :get, class: 'form-inline my-2 my-lg-0' do
-            = text_field_tag 'query', nil, class: 'form-control mr-sm-2', type: "search", placeholder: "Search", "aria-label": "Search"
-            = submit_tag 'Search', class: "btn btn-outline-success my-2 my-sm-0"
+          .row 
+            .col-12.col-lg-4
+              = link_to 'Register new book', new_book_path, class: 'btn btn-primary'
+            .col-12.col-lg-8
+              = form_tag search_books_path, method: :get, class: 'form-inline my-2 my-lg-0' do
+                = text_field_tag 'query', nil, class: 'form-control mr-sm-2', type: "search", placeholder: "Search", "aria-label": "Search"
 
     .list-group
       = render @books
-
-
--# %h1 Listing books
-
--# %table
--#   %thead
--#     %tr
--#       %th Title
--#       %th Author
--#       %th Isbn
--#       %th Publisher
--#       %th
--#       %th
--#       %th
-
--#   %tbody
--#     - @books.each do |book|
--#       %tr
--#         %td= book.title
--#         %td= book.author
--#         %td= book.isbn
--#         %td= book.publisher
--#         %td= link_to 'Show', book
--#         %td= link_to 'Edit', edit_book_path(book)
--#         %td= link_to 'Destroy', book, method: :delete, data: { confirm: 'Are you sure?' }
-
--# %br
-
--# = link_to 'New Book', new_book_path
+= render 'delete_modal'
+= javascript_pack_tag 'modal'

@@ -1,0 +1,12 @@
+.modal#delete-modal
+  .modal-dialog 
+    .modal-content
+      .modal-header 
+        %h5.modal-title Are you sure?
+        %button.close#modal-closer{"aria-label": "Close"}
+          %span{"aria-hidden": "true"} &times;
+      .modal-body 
+        This operation will delete permanently the book.
+      .modal-footer 
+        %button.btn.btn-secondary#modal-close-button Close 
+        %button.btn.btn-danger#modal-delete-button Delete

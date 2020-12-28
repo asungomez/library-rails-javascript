@@ -1,1 +1,6 @@
-@import '~bootstrap/scss/bootstrap'
+@import '~bootstrap/scss/bootstrap';
+
+.modal-visible {
+  display: block; 
+  background-color: rgba(0,0,0,.6);
+}
