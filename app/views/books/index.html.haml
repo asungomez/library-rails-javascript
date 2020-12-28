@@ -1,6 +1,18 @@
-%nav.navbar.navbar-expand-lg.navbar-light.bg-light
-  = link_to root_path, class: 'navbar-brand' do 
-    Biblioteca
+.row 
+  .col-12.col-md-6.offset-md-3
+    %h1.mb-4.mt-4.text-center Library index
+    .row.mb-4
+      .col-12
+        %nav.navbar.navbar-expand.navbar-light.bg-light.d-flex.justify-content-between
+          = link_to 'Register new book', new_book_path, class: 'btn btn-primary'
+          = form_tag search_books_path, method: :get, class: 'form-inline my-2 my-lg-0' do
+            = text_field_tag 'query', nil, class: 'form-control mr-sm-2', type: "search", placeholder: "Search", "aria-label": "Search"
+            = submit_tag 'Search', class: "btn btn-outline-success my-2 my-sm-0"
+
+    .list-group
+      = render @books
+
+
 -# %h1 Listing books
 
 -# %table

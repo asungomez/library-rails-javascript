@@ -8,4 +8,9 @@
     = stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_pack_tag 'application', 'data-turbolinks-track': 'reload'
   %body
-    = yield
+    %nav.navbar.navbar-expand-lg.navbar-light.bg-light
+      = link_to root_path, class: 'navbar-brand' do 
+        Biblioteca
+    %main.container
+      = render 'layouts/alerts'
+      = yield

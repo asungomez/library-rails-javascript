@@ -61,6 +61,12 @@ class BooksController < ApplicationController
     end
   end
 
+  # GET /search
+  def search
+    @books = Book.search(params[:query])
+    render :index
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_book
