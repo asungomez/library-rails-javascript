@@ -1,24 +1,20 @@
-# README
+# Library Rails-Javascript
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+**Ruby version:** 2.7.1
+**Rails version:** 6.0.3
 
-Things you may want to cover:
+Install app locally:
 
-* Ruby version
+```
+git clone https://github.com/asungomez/library-rails-javascript.git
+cd library-rails-javascript
+bundle install
+yarn install
+rails db:migrate
+```
 
-* System dependencies
+Run server locally:
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+```
+rails s
+```
