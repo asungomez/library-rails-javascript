@@ -11,6 +11,6 @@
     %nav.navbar.navbar-expand-lg.navbar-light.bg-light
       = link_to root_path, class: 'navbar-brand' do 
         Biblioteca
+    = flash_messages
     %main.container
-      = render 'layouts/alerts'
       = yield
